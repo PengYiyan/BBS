@@ -1,0 +1,19 @@
+spring:
+  data:
+    mongodb:
+      authentication-database: admin
+      host: 127.0.0.1
+      port: 27017
+      username: root
+      password: root
+      database: bbs
+
+jwt:
+  header: Authorization
+  secret: UenM4KGb6DskRWUenM4KGb6DskRWUenM4KGb6DskRWUenM4KGb6DskRWUenM4KGb6DskRWUenM4KGb6DskRWUenM4KGb6DskRWUenM4KGb6DskRWUenM4KGb6DskRW
+
+logging:
+  file:
+    name: /app/eval.log
+  level:
+    root: info
