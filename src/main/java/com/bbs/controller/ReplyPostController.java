@@ -10,6 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @CrossOrigin
-@RequestMapping("/account")
-public class AccountController {
+@RequestMapping("/replypost")
+public class ReplyPostController {
 }

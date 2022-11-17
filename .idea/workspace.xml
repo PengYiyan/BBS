@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f690369a-ffae-4c0e-8872-76bb1d96d1e2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bbs/controller/MainPostController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bbs/controller/ReplyPostController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bbs/controller/WithinReplyController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bbs/data/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bbs/data/entity/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/bbs/MongoTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/bbs/MongoTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bbs/controller/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bbs/controller/AccountController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +57,7 @@
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/bbs/controller" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -66,6 +68,7 @@
       <recent name="com.bbs.enums" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\_18SE\_暑期项目\BBS\src\main\java\com\bbs\controller" />
       <recent name="C:\_18SE\_暑期项目\苏州中学合作BBS\project\src\main\resources" />
     </key>
   </component>
@@ -118,6 +121,7 @@
       <updated>1668520204323</updated>
       <workItem from="1668520205656" duration="11645000" />
       <workItem from="1668662250186" duration="820000" />
+      <workItem from="1668695284346" duration="686000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1668662637927</created>
