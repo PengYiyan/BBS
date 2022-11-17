@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f690369a-ffae-4c0e-8872-76bb1d96d1e2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bbs/data/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bbs/data/entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/bbs/MongoTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/bbs/MongoTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +36,9 @@
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="2HaPQVKM60Cx3qhOQYcALGd0EtH" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -51,13 +52,14 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="application.passwordSafe" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -115,34 +117,55 @@
       <option name="presentableId" value="Default" />
       <updated>1668520204323</updated>
       <workItem from="1668520205656" duration="11645000" />
-      <workItem from="1668662250186" duration="264000" />
+      <workItem from="1668662250186" duration="820000" />
     </task>
+    <task id="LOCAL-00001" summary="init">
+      <created>1668662637927</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1668662637927</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="init" />
+    <option name="LAST_COMMIT_MESSAGE" value="init" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="57" y="160" key="#MongoTests.testMongoAdd" timestamp="1668662685725">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="57" y="160" key="#MongoTests.testMongoAdd/0.0.1920.1040@0.0.1920.1040" timestamp="1668662685725" />
     <state x="79" y="178" key="#Project_Structure" timestamp="1668520307635">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="79" y="178" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1668520307635" />
-    <state width="914" height="281" key="GridCell.Tab.0.bottom" timestamp="1668530846317">
+    <state x="80" y="115" key="CommitChangelistDialog2" timestamp="1668662637203">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1668530846317" />
-    <state width="914" height="281" key="GridCell.Tab.0.center" timestamp="1668530846317">
+    <state x="80" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1668662637203" />
+    <state width="914" height="213" key="GridCell.Tab.0.bottom" timestamp="1668663071864">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1668530846317" />
-    <state width="914" height="281" key="GridCell.Tab.0.left" timestamp="1668530846317">
+    <state width="914" height="213" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1668663071864" />
+    <state width="914" height="213" key="GridCell.Tab.0.center" timestamp="1668663071863">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1668530846317" />
-    <state width="914" height="281" key="GridCell.Tab.0.right" timestamp="1668530846317">
+    <state width="914" height="213" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1668663071863" />
+    <state width="914" height="213" key="GridCell.Tab.0.left" timestamp="1668663071863">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1668530846317" />
+    <state width="914" height="213" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1668663071863" />
+    <state width="914" height="213" key="GridCell.Tab.0.right" timestamp="1668663071864">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="914" height="213" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1668663071864" />
     <state width="914" height="281" key="GridCell.Tab.1.bottom" timestamp="1668530846318">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -163,5 +186,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="10" y="178" key="Maven.ArtifactSearchDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1668524179543" />
+    <state x="0" y="165" key="SettingsEditor" timestamp="1668663070410">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="0" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1668663070410" />
+    <state x="72" y="256" key="Vcs.Push.Dialog.v2" timestamp="1668662790426">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="72" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1668662790426" />
   </component>
 </project>
