@@ -1,5 +1,6 @@
 package com.bbs.data.entity;
 
+import com.bbs.enums.PostTypeRole;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -37,6 +38,12 @@ public class MainPost {
     private String title;
 
     /**
+     * 帖子类型 提问or资源or整理
+     */
+    @Field("type")
+    private PostTypeRole type;
+
+    /**
      * 帖子内容
      */
     @Field("content")
@@ -53,6 +60,18 @@ public class MainPost {
      */
     @Field("time")
     private Date time;
+
+    /**
+     * 资源的urls
+     */
+    @Field("resources")
+    private List<String> resources;
+
+    /**
+     * 图片的urls
+     */
+    @Field("pics")
+    private List<String> pics;
 
     /**
      * 回帖id集合

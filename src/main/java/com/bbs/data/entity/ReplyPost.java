@@ -49,6 +49,12 @@ public class ReplyPost {
     private Integer userId;
 
     /**
+     * 被回复人的昵称
+     */
+    @Field("username")
+    private String name;
+
+    /**
      * 回帖时间
      */
     @Field("time")
@@ -61,9 +67,15 @@ public class ReplyPost {
     private int floor;
 
     /**
-     * 楼中楼集合
+     * 图片的urls
      */
-    @Field("replys")
-    private List<WithinReply> replys;
+    @Field("pics")
+    private List<String> pics;
+
+//    /**
+//     * 楼中楼集合
+//     */
+//    @Field("replys")
+//    private List<WithinReply> replys;
 
 }
