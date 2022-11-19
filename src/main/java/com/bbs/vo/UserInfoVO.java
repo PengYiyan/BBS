@@ -11,7 +11,7 @@ import lombok.Data;
 @Data
 public class UserInfoVO {
 
-    private int id;
+    private Integer id;
     private String name;
     private String email;
     private String phone;
