@@ -1,6 +1,7 @@
 package com.bbs.data.entity;
 
-import com.bbs.enums.PostTypeRole;
+import com.bbs.enums.PostType;
+import com.bbs.enums.SubjectType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -41,7 +42,13 @@ public class MainPost {
      * 帖子类型 提问or资源or整理
      */
     @Field("type")
-    private PostTypeRole type;
+    private PostType type;
+
+    /**
+     * 帖子所属的科目类型
+     */
+    @Field("subject")
+    private SubjectType subject;
 
     /**
      * 帖子内容
