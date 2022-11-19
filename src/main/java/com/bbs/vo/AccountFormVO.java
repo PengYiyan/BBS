@@ -1,14 +1,16 @@
 package com.bbs.vo;
 
 import lombok.AllArgsConstructor;
+import lombok.Data;
 
 /**
  * 用户注册or登录账号时传递的VO
  * @author Peng Yiyan
  * @since 2022/11/18
  */
+@Data
 public class AccountFormVO {
-    
+
     private String name;
     private String email;
     private String phone;

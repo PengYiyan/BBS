@@ -1,11 +1,14 @@
 package com.bbs.vo;
 
 
+import lombok.Data;
+
 /**
  * 用户修改个人信息时传递的VO
  * @author Peng Yiyan
  * @since 2022/11/18
  */
+@Data
 public class UserInfoVO {
 
     private int id;
