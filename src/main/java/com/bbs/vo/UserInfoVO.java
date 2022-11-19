@@ -1,0 +1,28 @@
+package com.bbs.vo;
+
+
+/**
+ * 用户修改个人信息时传递的VO
+ * @author Peng Yiyan
+ * @since 2022/11/18
+ */
+public class UserInfoVO {
+
+    private int id;
+    private String name;
+    private String email;
+    private String phone;
+    private String password;
+    private String picture;
+
+    public UserInfoVO(){}
+
+    public UserInfoVO(int id,String name,String email,String phone,String password,String picture){
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.phone = phone;
+        this.password = password;
+        this.picture = picture;
+    }
+}
