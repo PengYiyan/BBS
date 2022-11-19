@@ -28,7 +28,7 @@ public class WithinReply {
      */
     @Id
     @Field("id")
-    private Integer postId;
+    private int postId;
 
     /**
      * 回帖的内容
@@ -40,7 +40,7 @@ public class WithinReply {
      * 回帖人的id
      */
     @Field("user_id")
-    private Integer userId;
+    private int userId;
 
     /**
      * 被回复人的昵称

@@ -29,7 +29,7 @@ public class MainPost {
      */
     @Id
     @Field("id")
-    private Integer postId;
+    private int postId;
 
     /**
      * 帖子标题
@@ -53,7 +53,7 @@ public class MainPost {
      * 发帖人的id
      */
     @Field("user_id")
-    private Integer userId;
+    private int userId;
 
     /**
      * 发帖时间

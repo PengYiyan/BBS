@@ -28,7 +28,7 @@ public class ReplyPost {
      */
     @Id
     @Field("id")
-    private Integer postId;
+    private int postId;
 
     /**
      * 回帖的内容
@@ -40,13 +40,13 @@ public class ReplyPost {
      * 对应主贴的id
      */
     @Field("main_id")
-    private Integer mainId;
+    private int mainId;
 
     /**
      * 回帖人的id
      */
     @Field("user_id")
-    private Integer userId;
+    private int userId;
 
     /**
      * 被回复人的昵称

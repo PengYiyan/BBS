@@ -26,7 +26,7 @@ public class User {
      */
     @Id
     @Field("user_id")
-    private Integer userId;
+    private int userId;
 
     /**
      * 用户的名称
