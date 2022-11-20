@@ -44,7 +44,7 @@ public class MongoTests {
     void testObjectIdCompare(){
         //测试ObjectId和String的对比
 //        System.out.println(testTypeDao.findByName("haveATest").getTestId().equals("6379eec45ad35472839a105b"));
-        System.out.println(testTypeDao.findByName("haveATest"));
+        System.out.println(testTypeDao.findByName("haveATest").getTestId().toHexString().equals("6379fb76cbe2ee557fbde1e4"));
     }
 
     @Test

@@ -27,7 +27,7 @@ public class ReplyPostController {
     }
 
     @GetMapping("/deleteReplyPost")
-    public ResponseVO deleteReplyPost(@RequestParam(value = "postId") Integer postId){
+    public ResponseVO deleteReplyPost(@RequestParam(value = "postId") String postId){
         return ResponseVO.buildSuccess(replyPostService.deleteReplyPost(postId));
     }
 }

@@ -33,7 +33,12 @@ public class ReplyPostServiceImpl implements ReplyPostService {
         replyPost.setTime(replyPostVO.getTime());
         replyPost.setFloor(replyPostVO.getFloor());
         replyPost.setReplyFloor(replyPostVO.getReplyFloor());
-        replyPost.setPics(replyPostVO.getPics());
+
+        if(replyPostVO.getPics()==null){
+            replyPost.setPics(replyPostVO.getPics());
+        }else {
+            replyPost.setPics(replyPostVO.getPics());
+        }
 
         replyPostDao.save(replyPost);
 
@@ -54,7 +59,6 @@ public class ReplyPostServiceImpl implements ReplyPostService {
 
     @Override
     public ResponseVO deleteReplyPost(String postId){
-        replyPostDao.deleteById(new ObjectId(postId));
 
         //删除主贴中的对应id
         ReplyPost replyPost = replyPostDao.findById(new ObjectId(postId)).get();
@@ -65,6 +69,7 @@ public class ReplyPostServiceImpl implements ReplyPostService {
         mainPost.setReplys(replyIds);
         mainPostDao.save(mainPost);
 
+        replyPostDao.deleteById(new ObjectId(postId));
         return ResponseVO.buildSuccess();
     }
 }

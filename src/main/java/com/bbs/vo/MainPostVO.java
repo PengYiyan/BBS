@@ -24,7 +24,8 @@ public class MainPostVO {
     private Date time;
     private List<String> resources;
     private List<String> pics;
-    private List<String> replys;
+//    private List<String> replys;
+
     //新增发帖用户的name和头像
     private String name;
     private String picture;

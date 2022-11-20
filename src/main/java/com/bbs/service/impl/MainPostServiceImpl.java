@@ -31,11 +31,21 @@ public class MainPostServiceImpl implements MainPostService {
         mainPost.setContent(mainPostVO.getContent());
         mainPost.setUserId(mainPostVO.getUserId());
         mainPost.setTime(mainPostVO.getTime());
-        mainPost.setResources(mainPostVO.getResources());
-        mainPost.setPics(mainPostVO.getPics());
-        mainPost.setReplys(mainPostVO.getReplys());
         mainPost.setName(mainPostVO.getName());
         mainPost.setPicture(mainPostVO.getPicture());
+        mainPost.setReplys(new ArrayList<>());
+
+        //可选项单独处理
+        if(mainPostVO.getResources()==null){
+            mainPost.setResources(new ArrayList<>());
+        }else {
+            mainPost.setResources(mainPostVO.getResources());
+        }
+        if(mainPostVO.getPics()==null){
+            mainPost.setPics(new ArrayList<>());
+        }else {
+            mainPost.setPics(mainPostVO.getPics());
+        }
 
         return ResponseVO.buildSuccess(mainPostDao.save(mainPost));
     }

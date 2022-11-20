@@ -27,7 +27,7 @@ public class MainPostController {
     }
 
     @GetMapping("/deleteMainPost")
-    public ResponseVO deleteMainPost(@RequestParam(value = "postId") Integer postId){
+    public ResponseVO deleteMainPost(@RequestParam(value = "postId") String postId){
         return ResponseVO.buildSuccess(mainPostService.deleteMainPost(postId));
     }
 
@@ -37,7 +37,7 @@ public class MainPostController {
     }
 
     @GetMapping("/getPostDetail")
-    public ResponseVO getPostDetail(@RequestParam(value = "postId") Integer postId){
+    public ResponseVO getPostDetail(@RequestParam(value = "postId") String postId){
         return ResponseVO.buildSuccess(mainPostService.getPostDetail(postId));
     }
 
