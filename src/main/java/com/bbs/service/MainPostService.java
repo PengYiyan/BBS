@@ -30,10 +30,10 @@ public interface MainPostService {
     ResponseVO deleteMainPost(String postId);
 
     /**
-     * 根据筛选条件返回post列表，筛选条件包括标题（关键词查询）、时间
+     * 根据筛选条件返回post列表，筛选条件包括标题（关键词查询）、时间（时间范围）
      * @param title,time,type,subject
      */
-    List<MainPost> getMainPosts(String title, String time);
+    List<MainPost> getMainPosts(String title, String startTime,String endTime);
 
     /**
      * 根据帖子id返回帖子

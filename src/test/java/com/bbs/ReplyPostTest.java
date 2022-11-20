@@ -9,6 +9,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 @SpringBootTest
@@ -23,13 +24,15 @@ public class ReplyPostTest {
 
     @Test
     void testNewReply(){
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
         ReplyPostVO replyPost = new ReplyPostVO();
         replyPost.setMainId("637a27261e71260c2c6fc91d");
         replyPost.setUserId("123");
         replyPost.setContent("I do like it");
         replyPost.setName("道士123");
         replyPost.setPicture("abababababab");
-        replyPost.setTime(new Date());
+        replyPost.setTime(sdf.format(new Date()));
         replyPost.setFloor(2);
         replyPost.setReplyFloor(1);
 
@@ -38,6 +41,6 @@ public class ReplyPostTest {
 
     @Test
     void testDelete(){
-        System.out.println(replyPostController.deleteReplyPost("637a2a2e0fc0d42fb652582d"));
+//        System.out.println(replyPostController.deleteReplyPost("637a2a2e0fc0d42fb652582d"));
     }
 }

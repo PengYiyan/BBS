@@ -21,7 +21,8 @@ public class MainPostVO {
     private SubjectType subjectType;
     private String content;
     private String userId;
-    private Date time;
+    //前端传入的时间是String
+    private String time;
     private List<String> resources;
     private List<String> pics;
 //    private List<String> replys;

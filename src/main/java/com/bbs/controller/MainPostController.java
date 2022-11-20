@@ -32,8 +32,8 @@ public class MainPostController {
     }
 
     @GetMapping("/getMainPosts")
-    public ResponseVO getMainPosts(@RequestParam(value = "title") String title,@RequestParam(value = "time") String time){
-        return ResponseVO.buildSuccess(mainPostService.getMainPosts(title,time));
+    public ResponseVO getMainPosts(@RequestParam(value = "title") String title,@RequestParam(value = "startTime") String startTime,@RequestParam(value = "endTime") String endTime){
+        return ResponseVO.buildSuccess(mainPostService.getMainPosts(title,startTime,endTime));
     }
 
     @GetMapping("/getPostDetail")

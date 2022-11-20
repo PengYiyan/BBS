@@ -79,7 +79,7 @@ public class MainPost {
      * 发帖时间
      */
     @Field("time")
-    private Date time;
+    private String time;
 
     /**
      * 资源的urls

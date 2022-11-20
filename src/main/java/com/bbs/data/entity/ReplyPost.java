@@ -65,7 +65,7 @@ public class ReplyPost {
      * 回帖时间
      */
     @Field("time")
-    private Date time;
+    private String time;
 
     /**
      * 回帖楼层

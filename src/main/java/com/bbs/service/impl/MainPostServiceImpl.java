@@ -7,6 +7,7 @@ import com.bbs.vo.MainPostVO;
 import com.bbs.vo.ResponseVO;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Example;
 import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.stereotype.Service;
 
@@ -57,13 +58,30 @@ public class MainPostServiceImpl implements MainPostService {
     }
 
     @Override
-    public List<MainPost> getMainPosts(String title, String time){
+    public List<MainPost> getMainPosts(String title, String startTime,String endTime){
+        List<MainPost> ori;
 
         if(!(title == null||title.length()==0)){
+            ExampleMatcher matcher = ExampleMatcher.matching()
+                    .withStringMatcher(ExampleMatcher.StringMatcher.CONTAINING)
+                    .withIgnoreCase(true);
 
-        }else {//如果没有安装标题查找，则只筛选时间
-
+            MainPost mainPost = new MainPost();
+            mainPost.setTitle(title);
+            Example<MainPost> mainPostExample = Example.of(mainPost,matcher);
+            ori = mainPostDao.findAll(mainPostExample);
+        }else {//如果不筛选标题，则返回所有帖子用于后续筛选时间范围
+            ori = mainPostDao.findAll();
         }
+
+
+        //如果不对时间进行筛选，直接返回上一步的结果
+        if(startTime==null||endTime==null){
+            return ori;
+        }
+        //完成第一步标题筛选，接下来对时间进行筛选
+
+
 
         return null;
     }

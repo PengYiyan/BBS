@@ -20,7 +20,8 @@ public class ReplyPostVO {
     private String name;
     //新增用户的头像
     private String picture;
-    private Date time;
+    //前端传入的时间是String
+    private String time;
     private int floor;
     //新增回复的目标楼层（回复的是哪一层）
     private int replyFloor;
