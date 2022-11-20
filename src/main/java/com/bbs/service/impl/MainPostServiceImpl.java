@@ -44,7 +44,7 @@ public class MainPostServiceImpl implements MainPostService {
     }
 
     @Override
-    public List<MainPost> getMainPosts(String title, Date time){
+    public List<MainPost> getMainPosts(String title, String time){
 
         if(!(title == null||title.length()==0)){
 

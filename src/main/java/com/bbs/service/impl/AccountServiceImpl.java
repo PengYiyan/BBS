@@ -74,6 +74,7 @@ public class AccountServiceImpl implements AccountService {
         user.setPassword(userInfoVO.getPassword());
         user.setEmail(userInfoVO.getEmail());
         user.setPhone(userInfoVO.getPhone());
+        user.setPicture(userInfoVO.getPicture());
 
         return ResponseVO.buildSuccess(userDao.save(user));
     }

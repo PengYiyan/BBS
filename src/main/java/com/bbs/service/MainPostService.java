@@ -33,7 +33,7 @@ public interface MainPostService {
      * 根据筛选条件返回post列表，筛选条件包括标题（关键词查询）、时间
      * @param title,time,type,subject
      */
-    List<MainPost> getMainPosts(String title, Date time);
+    List<MainPost> getMainPosts(String title, String time);
 
     /**
      * 根据帖子id返回帖子
