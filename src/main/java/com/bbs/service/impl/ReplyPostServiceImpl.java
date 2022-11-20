@@ -7,6 +7,7 @@ import com.bbs.data.entity.ReplyPost;
 import com.bbs.service.ReplyPostService;
 import com.bbs.vo.ReplyPostVO;
 import com.bbs.vo.ResponseVO;
+import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
 import org.springframework.stereotype.Service;
@@ -28,19 +29,21 @@ public class ReplyPostServiceImpl implements ReplyPostService {
         replyPost.setUserId(replyPostVO.getUserId());
         replyPost.setContent(replyPostVO.getContent());
         replyPost.setName(replyPostVO.getName());
+        replyPost.setPicture(replyPostVO.getPicture());
         replyPost.setTime(replyPostVO.getTime());
         replyPost.setFloor(replyPostVO.getFloor());
+        replyPost.setReplyFloor(replyPostVO.getReplyFloor());
         replyPost.setPics(replyPostVO.getPics());
 
         replyPostDao.save(replyPost);
 
         //在mainPost主贴中增加回帖的编号
-        MainPost mainPost = mainPostDao.findById(replyPostVO.getMainId()).get();
+        MainPost mainPost = mainPostDao.findById(new ObjectId(replyPostVO.getMainId())).get();
         Example<ReplyPost> replyPostExample = Example.of(replyPost);
         List<ReplyPost> all = replyPostDao.findAll(replyPostExample);
-        Integer replyPostId = all.get(all.size()-1).getPostId();
+        String replyPostId = all.get(all.size()-1).getPostId().toHexString();
 
-        List<Integer> replyIds = mainPost.getReplys();
+        List<String> replyIds = mainPost.getReplys();
         replyIds.add(replyPostId);
         mainPost.setReplys(replyIds);
         mainPostDao.save(mainPost);
@@ -50,14 +53,14 @@ public class ReplyPostServiceImpl implements ReplyPostService {
     }
 
     @Override
-    public ResponseVO deleteReplyPost(Integer postId){
-        replyPostDao.deleteById(postId);
+    public ResponseVO deleteReplyPost(String postId){
+        replyPostDao.deleteById(new ObjectId(postId));
 
         //删除主贴中的对应id
-        ReplyPost replyPost = replyPostDao.findById(postId).get();
-        MainPost mainPost = mainPostDao.findById(replyPost.getMainId()).get();
+        ReplyPost replyPost = replyPostDao.findById(new ObjectId(postId)).get();
+        MainPost mainPost = mainPostDao.findById(new ObjectId(replyPost.getMainId())).get();
 
-        List<Integer> replyIds = mainPost.getReplys();
+        List<String> replyIds = mainPost.getReplys();
         replyIds.remove(postId);
         mainPost.setReplys(replyIds);
         mainPostDao.save(mainPost);

@@ -5,6 +5,7 @@ import com.bbs.data.entity.MainPost;
 import com.bbs.service.MainPostService;
 import com.bbs.vo.MainPostVO;
 import com.bbs.vo.ResponseVO;
+import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.stereotype.Service;
@@ -32,14 +33,16 @@ public class MainPostServiceImpl implements MainPostService {
         mainPost.setTime(mainPostVO.getTime());
         mainPost.setResources(mainPostVO.getResources());
         mainPost.setPics(mainPostVO.getPics());
-        mainPost.setReplys(new ArrayList<>());
+        mainPost.setReplys(mainPostVO.getReplys());
+        mainPost.setName(mainPostVO.getName());
+        mainPost.setPicture(mainPostVO.getPicture());
 
         return ResponseVO.buildSuccess(mainPostDao.save(mainPost));
     }
 
     @Override
-    public ResponseVO deleteMainPost(Integer postId){
-        mainPostDao.deleteById(postId);
+    public ResponseVO deleteMainPost(String postId){
+        mainPostDao.deleteById(new ObjectId(postId));
         return ResponseVO.buildSuccess();
     }
 
@@ -56,7 +59,7 @@ public class MainPostServiceImpl implements MainPostService {
     }
 
     @Override
-    public MainPost getPostDetail(Integer postId){
-        return mainPostDao.findById(postId).get();
+    public MainPost getPostDetail(String postId){
+        return mainPostDao.findById(new ObjectId(postId)).get();
     }
 }

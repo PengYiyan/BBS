@@ -13,9 +13,9 @@ import java.util.List;
 @Data
 public class ReplyPostVO {
 
-    private Integer postId;
-    private Integer mainId;
-    private Integer userId;
+    private String postId;
+    private String mainId;
+    private String userId;
     private String content;
     private String name;
     //新增用户的头像

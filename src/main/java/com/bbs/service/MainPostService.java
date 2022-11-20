@@ -27,7 +27,7 @@ public interface MainPostService {
      * @param postId
      * @return
      */
-    ResponseVO deleteMainPost(Integer postId);
+    ResponseVO deleteMainPost(String postId);
 
     /**
      * 根据筛选条件返回post列表，筛选条件包括标题（关键词查询）、时间
@@ -40,6 +40,6 @@ public interface MainPostService {
      * @param postId
      * @return
      */
-    MainPost getPostDetail(Integer postId);
+    MainPost getPostDetail(String postId);
 
 }

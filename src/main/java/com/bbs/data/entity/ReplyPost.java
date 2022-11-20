@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
+import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
@@ -28,7 +29,7 @@ public class ReplyPost {
      */
     @Id
     @Field("id")
-    private Integer postId;
+    private ObjectId postId;
 
     /**
      * 回帖的内容
@@ -40,19 +41,25 @@ public class ReplyPost {
      * 对应主贴的id
      */
     @Field("main_id")
-    private Integer mainId;
+    private String mainId;
 
     /**
      * 回帖人的id
      */
     @Field("user_id")
-    private Integer userId;
+    private String userId;
 
     /**
-     * 被回复人的昵称
+     * 回复人的名字
      */
     @Field("username")
     private String name;
+
+    /**
+     * 回复人的头像
+     */
+    @Field("picture")
+    private String picture;
 
     /**
      * 回帖时间
@@ -65,6 +72,12 @@ public class ReplyPost {
      */
     @Field("floor")
     private int floor;
+
+    /**
+     * 新增：回复的目标楼层（回复的是哪一层）
+     */
+    @Field("replyFloor")
+    private int replyFloor;
 
     /**
      * 图片的urls

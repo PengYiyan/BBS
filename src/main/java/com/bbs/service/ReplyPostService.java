@@ -22,5 +22,5 @@ public interface ReplyPostService {
      * @param postId
      * @return
      */
-    ResponseVO deleteReplyPost(Integer postId);
+    ResponseVO deleteReplyPost(String postId);
 }

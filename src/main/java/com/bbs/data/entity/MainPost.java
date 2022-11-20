@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
+import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
@@ -30,7 +31,7 @@ public class MainPost {
      */
     @Id
     @Field("id")
-    private Integer postId;
+    private ObjectId postId;
 
     /**
      * 帖子标题
@@ -60,7 +61,19 @@ public class MainPost {
      * 发帖人的id
      */
     @Field("user_id")
-    private Integer userId;
+    private String userId;
+
+    /**
+     * 新增：发帖用户的名字
+     */
+    @Field("name")
+    private String name;
+
+    /**
+     * 新增：发帖用户的头像
+     */
+    @Field("picture")
+    private String picture;
 
     /**
      * 发帖时间
@@ -84,6 +97,6 @@ public class MainPost {
      * 回帖id集合
      */
     @Field("replys")
-    private List<Integer> replys;
+    private List<String> replys;
 
 }
