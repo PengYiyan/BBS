@@ -25,6 +25,8 @@ public class MainPostVO {
     private List<String> resources;
     private List<String> pics;
     private List<Integer> replys;
-
+    //新增发帖用户的name和头像
+    private String name;
+    private String picture;
 
 }

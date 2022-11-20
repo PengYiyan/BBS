@@ -18,7 +18,13 @@ public class ReplyPostVO {
     private Integer userId;
     private String content;
     private String name;
+    //新增用户的头像
+    private String picture;
     private Date time;
     private int floor;
+    //新增回复的目标楼层（回复的是哪一层）
+    private int replyFloor;
     private List<String> pics;
+
+
 }
