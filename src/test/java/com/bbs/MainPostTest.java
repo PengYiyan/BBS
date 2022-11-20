@@ -8,11 +8,13 @@ import com.bbs.enums.SubjectType;
 import com.bbs.service.MainPostService;
 import com.bbs.vo.MainPostVO;
 import org.junit.jupiter.api.Test;
+import org.omg.Messaging.SYNC_WITH_TRANSPORT;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.ExampleMatcher;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -32,13 +34,13 @@ public class MainPostTest {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
         MainPostVO mainPostVO = new MainPostVO();
-        mainPostVO.setTitle("你好");
+        mainPostVO.setTitle("Favorite");
         mainPostVO.setType(PostType.SHARE);
         mainPostVO.setSubjectType(SubjectType.ENGLISH);
         mainPostVO.setContent("I will introduce it to you");
-        mainPostVO.setUserId("12345");
-        mainPostVO.setTime(sdf.format(new Date()));
-        mainPostVO.setName("道士");
+        mainPostVO.setUserId("6379fb76cbe2ee557fbde1e4");
+        mainPostVO.setTime("2021-04-01 11:11:11");
+        mainPostVO.setName("lty");
         mainPostVO.setPicture("123456789");
 
         List<String> resources = new ArrayList<>();
@@ -50,11 +52,16 @@ public class MainPostTest {
 
     @Test
     void testTimeFormat(){
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+//        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 
         Date date = new Date();
         System.out.println(date);
         System.out.println(sdf.format(date));
+//        String[] res = sdf.format(date).split(" ")[0].split("-");
+//        for(String s :res){
+//            System.out.print(s+" ");
+//        }
     }
 
     @Test
@@ -78,6 +85,15 @@ public class MainPostTest {
         Example<MainPost> mainPostExample = Example.of(mainPost,matcher);
         List<MainPost> all = mainPostDao.findAll(mainPostExample);
         System.out.println(all.size());
+    }
 
+    @Test
+    void testGetMainPosts() throws ParseException {
+        String userId = "12345";
+        String startTime = null;
+        String endTime = null;
+        String title = "好";
+
+        System.out.println(mainPostService.getMainPosts(userId,title,startTime,endTime).size());
     }
 }

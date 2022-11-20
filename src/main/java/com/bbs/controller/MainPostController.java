@@ -6,6 +6,8 @@ import com.bbs.vo.ResponseVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.text.ParseException;
+
 /**
  * @author Peng Yiyan
  * @since 2022/11/17
@@ -32,8 +34,11 @@ public class MainPostController {
     }
 
     @GetMapping("/getMainPosts")
-    public ResponseVO getMainPosts(@RequestParam(value = "title") String title,@RequestParam(value = "startTime") String startTime,@RequestParam(value = "endTime") String endTime){
-        return ResponseVO.buildSuccess(mainPostService.getMainPosts(title,startTime,endTime));
+    public ResponseVO getMainPosts(@RequestParam(value = "userId") String userId,
+                                   @RequestParam(value = "title") String title,
+                                   @RequestParam(value = "startTime") String startTime,
+                                   @RequestParam(value = "endTime") String endTime) throws ParseException {
+        return ResponseVO.buildSuccess(mainPostService.getMainPosts(userId,title,startTime,endTime));
     }
 
     @GetMapping("/getPostDetail")

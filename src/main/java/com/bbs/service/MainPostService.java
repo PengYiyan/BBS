@@ -5,6 +5,7 @@ import com.bbs.data.entity.MainPost;
 import com.bbs.vo.MainPostVO;
 import com.bbs.vo.ResponseVO;
 
+import java.text.ParseException;
 import java.util.Date;
 import java.util.List;
 
@@ -30,10 +31,12 @@ public interface MainPostService {
     ResponseVO deleteMainPost(String postId);
 
     /**
-     * 根据筛选条件返回post列表，筛选条件包括标题（关键词查询）、时间（时间范围）
-     * @param title,time,type,subject
+     * 根据筛选条件返回post列表
+     * 筛选条件包括用户id、标题（关键词查询）、时间（时间范围）
+     * @param userId,title,startTime,endTime
+     * @return
      */
-    List<MainPost> getMainPosts(String title, String startTime,String endTime);
+    List<MainPost> getMainPosts(String userId,String title, String startTime,String endTime) throws ParseException;
 
     /**
      * 根据帖子id返回帖子
