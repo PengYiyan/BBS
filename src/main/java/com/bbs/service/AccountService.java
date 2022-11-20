@@ -26,12 +26,12 @@ public interface AccountService {
      */
     ResponseVO register(AccountFormVO accountFormVO);
 
-    /**
-     * 上传头像
-     * @param userId, picture
-     * @return
-     */
-    ResponseVO uploadPic(int userId,String picture);
+//    /**
+//     * 上传头像
+//     * @param userId, picture
+//     * @return
+//     */
+//    ResponseVO uploadPic(int userId,String picture);
 
     /**
      * 更新用户信息
