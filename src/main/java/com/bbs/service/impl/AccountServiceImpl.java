@@ -6,6 +6,7 @@ import com.bbs.service.AccountService;
 import com.bbs.vo.AccountFormVO;
 import com.bbs.vo.ResponseVO;
 import com.bbs.vo.UserInfoVO;
+import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -35,7 +36,7 @@ public class AccountServiceImpl implements AccountService {
             return ResponseVO.buildFailure(WRONG_PSW);
         }
 
-        return ResponseVO.buildSuccess(new UserInfoVO(res.getUserId(),res.getName(),res.getEmail(),res.getPhone(),res.getPassword(),res.getPicture()));
+        return ResponseVO.buildSuccess(new UserInfoVO(res.getUserId().toHexString(),res.getName(),res.getEmail(),res.getPhone(),res.getPassword(),res.getPicture()));
     }
 
     @Override
@@ -55,26 +56,36 @@ public class AccountServiceImpl implements AccountService {
         return ResponseVO.buildSuccess(userDao.save(user));
     }
 
-    @Override
-    public ResponseVO uploadPic(int userId,String picture){
-        Optional<User> result = userDao.findById(userId);
-        if(!result.isPresent()){
-            return ResponseVO.buildFailure(ACCOUNT_NOT_EXIST);
-        }
-        User user = userDao.findById(userId).get();
-        user.setPicture(picture);
-
-        return ResponseVO.buildSuccess(userDao.save(user));
-    }
+//    @Override
+//    public ResponseVO uploadPic(int userId,String picture){
+//        Optional<User> result = userDao.findById(userId);
+//        if(!result.isPresent()){
+//            return ResponseVO.buildFailure(ACCOUNT_NOT_EXIST);
+//        }
+//        User user = userDao.findById(userId).get();
+//        user.setPicture(picture);
+//
+//        return ResponseVO.buildSuccess(userDao.save(user));
+//    }
 
     @Override
     public ResponseVO update(UserInfoVO userInfoVO){
-        User user = userDao.findById(userInfoVO.getId()).get();
-        user.setName(userInfoVO.getName());
-        user.setPassword(userInfoVO.getPassword());
-        user.setEmail(userInfoVO.getEmail());
-        user.setPhone(userInfoVO.getPhone());
-        user.setPicture(userInfoVO.getPicture());
+        User user = userDao.findById(new ObjectId(userInfoVO.getId())).get();
+        if(userInfoVO.getName()!=null){
+            user.setName(userInfoVO.getName());
+        }
+        if(userInfoVO.getPassword()!=null) {
+            user.setPassword(userInfoVO.getPassword());
+        }
+        if(userInfoVO.getEmail()!=null) {
+            user.setEmail(userInfoVO.getEmail());
+        }
+        if(userInfoVO.getPhone()!=null) {
+            user.setPhone(userInfoVO.getPhone());
+        }
+        if(userInfoVO.getPicture()!=null) {
+            user.setPicture(userInfoVO.getPicture());
+        }
 
         return ResponseVO.buildSuccess(userDao.save(user));
     }

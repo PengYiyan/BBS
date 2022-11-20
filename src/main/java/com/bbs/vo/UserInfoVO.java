@@ -11,7 +11,7 @@ import lombok.Data;
 @Data
 public class UserInfoVO {
 
-    private Integer id;
+    private String id;
     private String name;
     private String email;
     private String phone;
@@ -20,7 +20,7 @@ public class UserInfoVO {
 
     public UserInfoVO(){}
 
-    public UserInfoVO(int id,String name,String email,String phone,String password,String picture){
+    public UserInfoVO(String id,String name,String email,String phone,String password,String picture){
         this.id = id;
         this.name = name;
         this.email = email;
