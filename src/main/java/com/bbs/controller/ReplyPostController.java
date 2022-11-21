@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @CrossOrigin
-@RequestMapping("/replypost")
+@RequestMapping("/replyPost")
 public class ReplyPostController {
     private final ReplyPostService replyPostService;
 
@@ -21,8 +21,9 @@ public class ReplyPostController {
         this.replyPostService = replyPostService;
     }
 
-    @GetMapping("/newReplyPost")
+    @PostMapping("/newReplyPost")
     public ResponseVO newReplyPost(@RequestBody ReplyPostVO replyPostVO){
+
         return ResponseVO.buildSuccess(replyPostService.newReplyPost(replyPostVO));
     }
 

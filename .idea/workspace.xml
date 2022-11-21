@@ -1,12 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="f690369a-ffae-4c0e-8872-76bb1d96d1e2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bbs/controller/MainPostController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bbs/controller/ReplyPostController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bbs/controller/WithinReplyController.java" afterDir="false" />
+    <list default="true" id="f690369a-ffae-4c0e-8872-76bb1d96d1e2" name="Default Changelist" comment="init">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bbs/controller/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bbs/controller/AccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bbs/controller/MainPostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bbs/controller/MainPostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bbs/controller/ReplyPostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bbs/controller/ReplyPostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bbs/service/MainPostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bbs/service/MainPostService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bbs/service/impl/MainPostServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bbs/service/impl/MainPostServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bbs/vo/MainPostVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bbs/vo/MainPostVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/bbs/MainPostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/bbs/MainPostTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/bbs/MongoTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/bbs/MongoTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/bbs/ReplyPostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/bbs/ReplyPostTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bbs/data/dao/MainPost.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bbs/data/dao/ReplyPost.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bbs/data/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bbs/data/dao/UserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bbs/data/entity/MainPost.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bbs/data/entity/MainPost.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bbs/data/entity/ReplyPost.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bbs/data/entity/ReplyPost.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bbs/data/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bbs/data/entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bbs/data/entity/WithinReply.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bbs/data/entity/WithinReply.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/bbs/MongoTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/bbs/MongoTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +43,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -43,26 +62,26 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="RequestMappingsPanelOrder0" value="0" />
-    <property name="RequestMappingsPanelOrder1" value="1" />
-    <property name="RequestMappingsPanelWidth0" value="75" />
-    <property name="RequestMappingsPanelWidth1" value="75" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/bbs/controller" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="application.passwordSafe" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/code/codeProject/szsyzx/be/BBS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;e769ae9749a0077873f72febc3168c62&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.bbs.enums" />
@@ -72,9 +91,16 @@
       <recent name="C:\_18SE\_暑期项目\苏州中学合作BBS\project\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MongoTests.testMongoAdd">
-    <configuration name="MongoTests.testMongoAdd" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="project" />
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.BBSApplication (1)">
+    <configuration name="AccountTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BBS" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.bbs.*" />
@@ -82,21 +108,77 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.bbs" />
-      <option name="MAIN_CLASS_NAME" value="com.bbs.MongoTests" />
-      <option name="METHOD_NAME" value="testMongoAdd" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="com.bbs.AccountTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BBSApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="project" />
+    <configuration name="MainPostTest.testGetMainPosts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BBS" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.bbs.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.bbs" />
+      <option name="MAIN_CLASS_NAME" value="com.bbs.MainPostTest" />
+      <option name="METHOD_NAME" value="testGetMainPosts" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainPostTest.testNewPost" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BBS" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bbs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.bbs" />
+      <option name="MAIN_CLASS_NAME" value="com.bbs.MainPostTest" />
+      <option name="METHOD_NAME" value="testNewPost" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReplyPostTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BBS" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bbs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.bbs" />
+      <option name="MAIN_CLASS_NAME" value="com.bbs.ReplyPostTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReplyPostTest.testNewReply" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BBS" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bbs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.bbs" />
+      <option name="MAIN_CLASS_NAME" value="com.bbs.ReplyPostTest" />
+      <option name="METHOD_NAME" value="testNewReply" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BBSApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="BBS" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.bbs.BBSApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -104,11 +186,15 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MongoTests.testMongoAdd" />
-        <item itemvalue="Spring Boot.BBSApplication" />
+        <item itemvalue="JUnit.MainPostTest.testGetMainPosts" />
+        <item itemvalue="JUnit.MainPostTest.testNewPost" />
+        <item itemvalue="JUnit.ReplyPostTest.testNewReply" />
+        <item itemvalue="JUnit.AccountTest" />
+        <item itemvalue="JUnit.ReplyPostTest" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -122,6 +208,9 @@
       <workItem from="1668520205656" duration="11645000" />
       <workItem from="1668662250186" duration="820000" />
       <workItem from="1668695284346" duration="686000" />
+      <workItem from="1668740294482" duration="6010000" />
+      <workItem from="1668996977937" duration="6609000" />
+      <workItem from="1669011435967" duration="13561000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1668662637927</created>
@@ -134,69 +223,22 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="init" />
     <option name="LAST_COMMIT_MESSAGE" value="init" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="57" y="160" key="#MongoTests.testMongoAdd" timestamp="1668662685725">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="57" y="160" key="#MongoTests.testMongoAdd/0.0.1920.1040@0.0.1920.1040" timestamp="1668662685725" />
-    <state x="79" y="178" key="#Project_Structure" timestamp="1668520307635">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="79" y="178" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1668520307635" />
-    <state x="80" y="115" key="CommitChangelistDialog2" timestamp="1668662637203">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="80" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1668662637203" />
-    <state width="914" height="213" key="GridCell.Tab.0.bottom" timestamp="1668663071864">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="914" height="213" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1668663071864" />
-    <state width="914" height="213" key="GridCell.Tab.0.center" timestamp="1668663071863">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="914" height="213" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1668663071863" />
-    <state width="914" height="213" key="GridCell.Tab.0.left" timestamp="1668663071863">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="914" height="213" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1668663071863" />
-    <state width="914" height="213" key="GridCell.Tab.0.right" timestamp="1668663071864">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="914" height="213" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1668663071864" />
-    <state width="914" height="281" key="GridCell.Tab.1.bottom" timestamp="1668530846318">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="914" height="281" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1668530846318" />
-    <state width="914" height="281" key="GridCell.Tab.1.center" timestamp="1668530846317">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="914" height="281" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1668530846317" />
-    <state width="914" height="281" key="GridCell.Tab.1.left" timestamp="1668530846317">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="914" height="281" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1668530846317" />
-    <state width="914" height="281" key="GridCell.Tab.1.right" timestamp="1668530846317">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="914" height="281" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1668530846317" />
-    <state x="10" y="178" key="Maven.ArtifactSearchDialog" timestamp="1668524179543">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="10" y="178" key="Maven.ArtifactSearchDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1668524179543" />
-    <state x="0" y="165" key="SettingsEditor" timestamp="1668663070410">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="0" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1668663070410" />
-    <state x="72" y="256" key="Vcs.Push.Dialog.v2" timestamp="1668662790426">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="72" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1668662790426" />
   </component>
 </project>

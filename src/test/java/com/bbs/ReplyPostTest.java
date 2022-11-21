@@ -27,7 +27,7 @@ public class ReplyPostTest {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
         ReplyPostVO replyPost = new ReplyPostVO();
-        replyPost.setMainId("637a27261e71260c2c6fc91d");
+        replyPost.setMainId("637aec2531b24a78ed792423");
         replyPost.setUserId("123");
         replyPost.setContent("I do like it");
         replyPost.setName("道士123");

@@ -18,7 +18,7 @@ public class MainPostVO {
     private String postId;
     private String title;
     private PostType type;
-    private SubjectType subjectType;
+    private SubjectType subject;
     private String content;
     private String userId;
     //前端传入的时间是String

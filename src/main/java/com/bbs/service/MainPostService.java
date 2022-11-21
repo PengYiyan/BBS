@@ -36,13 +36,13 @@ public interface MainPostService {
      * @param userId,title,startTime,endTime
      * @return
      */
-    List<MainPost> getMainPosts(String userId,String title, String startTime,String endTime) throws ParseException;
+    List<MainPostVO> getMainPosts(String userId,String title, String startTime,String endTime) throws ParseException;
 
     /**
      * 根据帖子id返回帖子
      * @param postId
      * @return
      */
-    MainPost getPostDetail(String postId);
+    MainPostVO getPostDetail(String postId);
 
 }

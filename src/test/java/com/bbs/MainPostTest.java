@@ -34,7 +34,7 @@ public class MainPostTest {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
         MainPostVO mainPostVO = new MainPostVO();
-        mainPostVO.setTitle("Favorite");
+        mainPostVO.setTitle("asdasd");
         mainPostVO.setType(PostType.SHARE);
         mainPostVO.setSubjectType(SubjectType.ENGLISH);
         mainPostVO.setContent("I will introduce it to you");
@@ -89,11 +89,11 @@ public class MainPostTest {
 
     @Test
     void testGetMainPosts() throws ParseException {
-        String userId = "12345";
+        String userId = null;
         String startTime = null;
         String endTime = null;
-        String title = "好";
+        String title = null;
 
-        System.out.println(mainPostService.getMainPosts(userId,title,startTime,endTime).size());
+        System.out.println(mainPostService.getMainPosts(userId,title,startTime,endTime));
     }
 }

@@ -3,6 +3,7 @@ package com.bbs.controller;
 import com.bbs.service.MainPostService;
 import com.bbs.vo.MainPostVO;
 import com.bbs.vo.ResponseVO;
+import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,7 +15,7 @@ import java.text.ParseException;
  */
 @RestController
 @CrossOrigin
-@RequestMapping("/mainpost")
+@RequestMapping("/mainPost")
 public class MainPostController {
     private final MainPostService mainPostService;
 
@@ -23,7 +24,7 @@ public class MainPostController {
         this.mainPostService = mainPostService;
     }
 
-    @GetMapping("/newMainPost")
+    @PostMapping("/newMainPost")
     public ResponseVO newMainPost(@RequestBody MainPostVO mainPostVO){
         return ResponseVO.buildSuccess(mainPostService.newMainPost(mainPostVO));
     }
@@ -34,16 +35,22 @@ public class MainPostController {
     }
 
     @GetMapping("/getMainPosts")
-    public ResponseVO getMainPosts(@RequestParam(value = "userId") String userId,
-                                   @RequestParam(value = "title") String title,
-                                   @RequestParam(value = "startTime") String startTime,
-                                   @RequestParam(value = "endTime") String endTime) throws ParseException {
+    public ResponseVO getMainPosts(@RequestParam(value = "userId",required = false) String userId,
+                                   @RequestParam(value = "title",required = false) String title,
+                                   @RequestParam(value = "startTime",required = false) String startTime,
+                                   @RequestParam(value = "endTime",required = false) String endTime) throws ParseException {
+        System.out.println(title);
         return ResponseVO.buildSuccess(mainPostService.getMainPosts(userId,title,startTime,endTime));
     }
 
     @GetMapping("/getPostDetail")
     public ResponseVO getPostDetail(@RequestParam(value = "postId") String postId){
         return ResponseVO.buildSuccess(mainPostService.getPostDetail(postId));
+    }
+
+    @GetMapping("convert")
+    public String convert(@RequestParam(value = "postId") ObjectId a){
+        return a.toHexString();
     }
 
 }

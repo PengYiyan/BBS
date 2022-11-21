@@ -1,8 +1,6 @@
 package com.bbs;
 
-import com.bbs.data.dao.TestTypeDao;
 import com.bbs.data.dao.UserDao;
-import com.bbs.data.entity.TestType;
 import com.bbs.data.entity.User;
 import com.bbs.enums.UserRole;
 import org.bson.types.ObjectId;
@@ -15,8 +13,7 @@ public class MongoTests {
 
     @Autowired
     private UserDao userDao;
-    @Autowired
-    private TestTypeDao testTypeDao;
+
 
     @Test
     void testMongoAdd(){
@@ -32,13 +29,7 @@ public class MongoTests {
         userDao.save(user);
     }
 
-    @Test
-    void testTestType(){
-        TestType testType = new TestType();
-        testType.setName("haveATest");
 
-        testTypeDao.save(testType);
-    }
 
     @Test
     void testObjectIdCompare(){

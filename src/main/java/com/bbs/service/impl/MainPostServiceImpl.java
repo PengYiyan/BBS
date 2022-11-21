@@ -27,7 +27,7 @@ public class MainPostServiceImpl implements MainPostService {
         MainPost mainPost = new MainPost();
         mainPost.setTitle(mainPostVO.getTitle());
         mainPost.setType(mainPostVO.getType());
-        mainPost.setSubject(mainPostVO.getSubjectType());
+        mainPost.setSubject(mainPostVO.getSubject());
         mainPost.setContent(mainPostVO.getContent());
         mainPost.setUserId(mainPostVO.getUserId());
         mainPost.setTime(mainPostVO.getTime());
@@ -57,9 +57,8 @@ public class MainPostServiceImpl implements MainPostService {
     }
 
     @Override
-    public List<MainPost> getMainPosts(String userId,String title, String startTime,String endTime) throws ParseException {
+    public List<MainPostVO> getMainPosts(String userId,String title, String startTime,String endTime) throws ParseException {
         List<MainPost> ori;
-
         //存在标题的情况
         if(title != null && title.length()!=0){
             ExampleMatcher matcher = ExampleMatcher.matching()
@@ -84,7 +83,8 @@ public class MainPostServiceImpl implements MainPostService {
 
         //如果不对时间进行筛选，直接返回上一步的结果
         if(startTime==null||endTime==null){
-            return ori;
+
+            return convertToVO(ori);
         }
 
 //        System.out.println("ori: "+ori.size());
@@ -113,11 +113,50 @@ public class MainPostServiceImpl implements MainPostService {
             }
         }
 
+        return convertToVO(ori);
+    }
+
+    public List<MainPostVO> convertToVO(List<MainPost> a){
+        List<MainPostVO> res = new ArrayList<>();
+        for(MainPost mainPost :a){
+            MainPostVO newOne = new MainPostVO();
+            newOne.setPostId(mainPost.getPostId().toHexString());
+            newOne.setTitle(mainPost.getTitle());
+            newOne.setType(mainPost.getType());
+            newOne.setSubject(mainPost.getSubject());
+            newOne.setContent(mainPost.getContent());
+            newOne.setUserId(mainPost.getUserId());
+            newOne.setTime(mainPost.getTime());
+            newOne.setResources(mainPost.getResources());
+            newOne.setPics(mainPost.getPics());
+            newOne.setReplys(mainPost.getReplys());
+            newOne.setName(mainPost.getName());
+            newOne.setPicture(mainPost.getPicture());
+            res.add(newOne);
+        }
+
         return res;
     }
 
+    public MainPostVO convertToVO2(MainPost mainPost){
+        MainPostVO newOne = new MainPostVO();
+        newOne.setPostId(mainPost.getPostId().toHexString());
+        newOne.setTitle(mainPost.getTitle());
+        newOne.setType(mainPost.getType());
+        newOne.setSubject(mainPost.getSubject());
+        newOne.setContent(mainPost.getContent());
+        newOne.setUserId(mainPost.getUserId());
+        newOne.setTime(mainPost.getTime());
+        newOne.setResources(mainPost.getResources());
+        newOne.setPics(mainPost.getPics());
+        newOne.setReplys(mainPost.getReplys());
+        newOne.setName(mainPost.getName());
+        newOne.setPicture(mainPost.getPicture());
+        return newOne;
+    }
+
     @Override
-    public MainPost getPostDetail(String postId){
-        return mainPostDao.findById(new ObjectId(postId)).get();
+    public MainPostVO getPostDetail(String postId){
+        return convertToVO2(mainPostDao.findById(new ObjectId(postId)).get());
     }
 }
